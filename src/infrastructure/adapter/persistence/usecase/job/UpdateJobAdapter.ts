@@ -29,11 +29,11 @@ export class UpdateJobAdapter implements UpdateJobPort {
 
   @Expose()
   @IsNumber()
-  public createdBy: number;
+  public createdBy?: number;
 
   @Expose()
   @IsString()
-  public createdAt: string;
+  public createdAt?: string;
 
   public static async new(payload: UpdateJobPort): Promise<UpdateJobAdapter> {
     const adapter: UpdateJobAdapter = plainToInstance(
